@@ -1,3 +1,4 @@
+* [**QuickStart**](/quick-start.md)
 * [**Dotfiles**](/dotfiles/readme.md)
   * [vim](/dotfiles/vim.md)
 * [**Crawler**](/crawler/readme.md)

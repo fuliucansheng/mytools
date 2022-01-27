@@ -5,4 +5,4 @@
 > *All useful tools in daily work and life.*
 
 [GitHub](https://github.com/fuliucansheng/my)
-[Get Started](#quick-start)
+[Get Started](/quick-start)
