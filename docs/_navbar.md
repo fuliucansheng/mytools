@@ -1,2 +1,2 @@
-* [Index](https://fuliucansheng.github.io/my)
+* [Index](https://fuliucansheng.github.io/mytools)
 * [Blog](https://fuliucansheng.github.io)
