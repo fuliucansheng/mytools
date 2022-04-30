@@ -1,0 +1,275 @@
+"*****************************************************************************
+"                Copyright (C) 2022, fuliucansheng. All Rights Reserved
+"
+"  FileName:   vimrc
+"  Desc:
+"  Author:     fuliucansheng
+"  Email:      fuliucansheng@gmail.com
+"  LastChange: 2022-04-30 22:48:22
+"  History:    2022-04-30 Create by fuliucansheng
+"*****************************************************************************
+
+" no vi-compatible
+set nocompatible
+set shortmess=atI
+filetype on
+" allow plugins by file type
+filetype plugin on
+filetype indent on
+
+set laststatus=2
+" tabs and spaces handling
+set expandtab
+set tabstop=4
+set softtabstop=4
+set shiftwidth=4
+
+set foldmethod=manual
+set cursorline
+" when scrolling, keep cursor 3 lines away from screen border
+" set scrolloff=3
+set autoread
+
+" tablength exceptions
+autocmd FileType html,ejs setlocal shiftwidth=2 tabstop=2 softtabstop=2
+autocmd FileType htmldjango setlocal shiftwidth=2 tabstop=2 softtabstop=2
+autocmd FileType javascript setlocal shiftwidth=2 tabstop=2 softtabstop=2
+
+set encoding=utf-8 fileencodings=ucs-bom,utf-8,cp936
+" always show status bar
+set ls=2
+
+set ignorecase
+
+" incremental search
+set incsearch
+
+" highlighted search results
+set hlsearch
+
+" syntax highlight on
+syntax on
+
+" line numbers
+set nu
+
+" space -- zo|zc
+nnoremap <space> @=((foldclosed(line('.')) < 0) ? 'zc' : 'zo')<CR>
+
+" save as sudo
+ca w!! w !sudo tee "%"
+
+"mouse on
+set mouse=v
+set pastetoggle=<F8>
+
+" autocompletion of files and commands behaves like shell
+" (complete only the common part, list the options that match)
+set wildmode=list:longest
+
+" Better backup, swap and undos storage
+set directory=~/.vim/dirs/tmp//     " directory to place swap files in
+set backup                        " make backup files
+set backupdir=~/.vim/dirs/backups// " where to put backup files
+set undofile                      " persistent undos - undo after you re-open the file
+set undodir=~/.vim/dirs/undos
+set viminfo+=n~/.vim/dirs/viminfo
+set completeopt=menu
+
+let g:first_startup = 0
+let plugfile=expand('~/.vim/autoload/plug.vim')
+if !filereadable(plugfile)
+    let g:first_startup = 1
+    echo "Installing plug..."
+    echo ""
+    silent !mkdir -p ~/.vim/dirs/{tmp,backups,undos}
+    silent !mkdir -p ~/.vim/autoload
+    silent !curl https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim -o ~/.vim/autoload/plug.vim
+endif
+
+call plug#begin('~/.vim/plugged')
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-repeat'
+Plug 'scrooloose/nerdtree'
+Plug 'scrooloose/nerdcommenter'
+Plug 'majutsushi/tagbar'
+Plug 'mattn/emmet-vim'
+Plug 'Chiel92/vim-autoformat'
+Plug 'junegunn/vim-easy-align'
+Plug 'easymotion/vim-easymotion'
+Plug 'luochen1990/rainbow'
+Plug 'liuchengxu/eleline.vim'
+Plug 'airblade/vim-gitgutter'
+Plug 'crusoexia/vim-dracula'
+Plug 'joshdick/onedark.vim'
+Plug 'sheerun/vim-polyglot'
+Plug 'Yggdroot/indentLine'
+Plug 'terryma/vim-multiple-cursors'
+Plug 'kshenoy/vim-signature'
+Plug 'mbbill/undotree'
+Plug 'Raimondi/delimitMate'
+Plug 'kien/ctrlp.vim'
+Plug 'fisadev/vim-ctrlp-cmdpalette'
+Plug 'kingmilian/AuthorInfo'
+Plug 'docunext/closetag.vim'
+Plug 'bronson/vim-trailing-whitespace'
+Plug 'iamcco/dict.vim'
+Plug 'airblade/vim-rooter'
+Plug 'thinca/vim-quickrun'
+Plug 'terryma/vim-expand-region'
+Plug 'dhruvasagar/vim-table-mode'
+Plug 'vim-scripts/IndexedSearch'
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf.vim'
+Plug 'fatih/vim-go'
+Plug 'vim-scripts/bash-support.vim'
+Plug 'ervandew/supertab'
+Plug 'vim-scripts/LargeFile'
+call plug#end()
+
+"# nerdtree
+map <F3> :NERDTreeToggle<CR>
+nmap ,t :NERDTreeFind<CR>
+" Ignore files on NERDTree
+let NERDTreeIgnore = ['\.pyc$', '\.pyo$']
+
+"# tagbar
+map <F5> :TagbarToggle<CR>
+let g:tagbar_ctags_bin='/usr/local/bin/ctags'
+let g:tagbar_autofocus = 1
+
+"# vim-easy-align
+xmap ga <Plug>(EasyAlign)
+nmap ga <Plug>(EasyAlign)
+
+"# rainbow
+let g:rainbow_active = 1
+
+"# vim-airline settings
+let g:airline_powerline_fonts = 1
+let g:eleline_powerline_fonts = 1
+
+"# colorscheme
+if g:first_startup == 0
+    colorscheme dracula
+    let g:dracula_italic = 1
+"    let g:onedark_termcolors=256
+"    colorscheme onedark
+endif
+
+"# indentline
+let g:indentLine_enabled = 1
+let g:indentLine_color_term = 239
+let g:indentLine_color_tty_light = 7
+let g:indentLine_color_dark = 1
+
+"# ctrlp
+" CtrlP (new fuzzy finder)
+let g:ctrlp_map = ',e'
+nmap ,g :CtrlPBufTag<CR>
+nmap ,G :CtrlPBufTagAll<CR>
+nmap ,f :CtrlPLine<CR>
+nmap ,m :CtrlPMRUFiles<CR>
+nmap ,c :CtrlPCmdPalette<CR>
+" to be able to call CtrlP with default search text
+function! CtrlPWithSearchText(search_text, ctrlp_command_end)
+    execute ':CtrlP' . a:ctrlp_command_end
+    call feedkeys(a:search_text)
+endfunction
+" CtrlP with default text
+nmap ,wg :call CtrlPWithSearchText(expand('<cword>'), 'BufTag')<CR>
+nmap ,wG :call CtrlPWithSearchText(expand('<cword>'), 'BufTagAll')<CR>
+nmap ,wf :call CtrlPWithSearchText(expand('<cword>'), 'Line')<CR>
+nmap ,we :call CtrlPWithSearchText(expand('<cword>'), '')<CR>
+nmap ,pe :call CtrlPWithSearchText(expand('<cfile>'), '')<CR>
+nmap ,wm :call CtrlPWithSearchText(expand('<cword>'), 'MRUFiles')<CR>
+nmap ,wc :call CtrlPWithSearchText(expand('<cword>'), 'CmdPalette')<CR>
+" Don't change working directory
+let g:ctrlp_working_path_mode = 0
+" Show hidden
+let g:ctrlp_show_hidden = 1
+" Ignore files on fuzzy finder
+let g:ctrlp_custom_ignore = {
+  \ 'dir':  '\v[\/](\.git|\.hg|\.svn)$',
+  \ 'file': '\.pyc$\|\.pyo$',
+  \ }
+
+"# Authorinfo
+nmap <F4> :AuthorInfoDetect<cr>
+nmap <F4>f :Dox<cr>
+let g:vimrc_author='fuliucansheng'
+let g:vimrc_email='fuliucansheng@gmail.com'
+let g:vimrc_homepage='http://fuliucansheng.github.io'
+
+"# closetag
+let g:closetag_html_style=1
+
+" rooter
+let g:rooter_change_directory_for_non_project_files = 'current'
+let g:rooter_silent_chdir = 1
+let g:rooter_manual_only = 1
+
+" quickrun
+let g:quickrun_config = {
+\   "_" : {
+\       "outputter" : "message",
+\   },
+\}
+let g:quickrun_no_default_key_mappings = 1
+map <F12> :QuickRun<CR>
+autocmd Filetype javascript map <F12> :QuickRun node<CR>
+
+" vim-expand-region
+map K <Plug>(expand_region_expand)
+map J <Plug>(expand_region_shrink)
+
+" Mapping selecting mappings
+nmap <leader><tab> <plug>(fzf-maps-n)
+xmap <leader><tab> <plug>(fzf-maps-x)
+omap <leader><tab> <plug>(fzf-maps-o)
+
+" Insert mode completion
+imap <c-x><c-k> <plug>(fzf-complete-word)
+imap <c-x><c-f> <plug>(fzf-complete-path)
+imap <c-x><c-j> <plug>(fzf-complete-file-ag)
+imap <c-x><c-l> <plug>(fzf-complete-line)
+
+" Advanced customization using autoload functions
+inoremap <expr> <c-x><c-k> fzf#vim#complete#word({'left': '15%'})
+
+" vim-go
+let g:go_highlight_functions = 1
+let g:go_highlight_methods = 1
+let g:go_highlight_fields = 1
+let g:go_highlight_types = 1
+let g:go_highlight_operators = 1
+let g:go_highlight_build_constraints = 1
+let g:go_term_enabled = 1
+let g:syntastic_go_checkers = ['golint', 'govet', 'errcheck']
+let g:syntastic_mode_map = { 'mode': 'active', 'passive_filetypes': ['go'] }
+let g:go_list_type = "quickfix"
+
+" supertab
+let g:SuperTabDefaultCompletionType = "<c-n>"
+
+" cscope
+if has("cscope")
+  set csprg=/usr/bin/cscope
+  set csto=1
+  set cst
+  set nocsverb
+  " add any database in current directory
+  if filereadable("cscope.out")
+      cs add cscope.out
+  endif
+  set csverb
+endif
+
+nmap <C-@>s :cs find s <C-R>=expand("<cword>")<CR><CR>
+nmap <C-@>g :cs find g <C-R>=expand("<cword>")<CR><CR>
+nmap <C-@>c :cs find c <C-R>=expand("<cword>")<CR><CR>
+nmap <C-@>t :cs find t <C-R>=expand("<cword>")<CR><CR>
+nmap <C-@>e :cs find e <C-R>=expand("<cword>")<CR><CR>
+nmap <C-@>f :cs find f <C-R>=expand("<cfile>")<CR><CR>
+nmap <C-@>i :cs find i ^<C-R>=expand("<cfile>")<CR>$<CR>
+nmap <C-@>d :cs find d <C-R>=expand("<cword>")<CR><CR>
