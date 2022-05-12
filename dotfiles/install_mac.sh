@@ -22,9 +22,6 @@ set -o nounset                              # Treat unset variables as an error
 sudo brew update
 sudo brew install -y htop vim tmux zsh
 
-# oh my zsh
-sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-
 # fzf
 git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 ~/.fzf/install
@@ -37,5 +34,8 @@ cp .tmux/.tmux.conf.local .
 
 # vimrc
 wget https://raw.githubusercontent.com/fuliucansheng/mytools/master/dotfiles/vim/vimrc -q -O ~/.vimrc
+
+# oh my zsh
+sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
 
