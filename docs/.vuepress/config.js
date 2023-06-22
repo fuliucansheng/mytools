@@ -112,9 +112,9 @@ export default defineUserConfig({
         },
       },
       feed: {
-        atom: true,
-        json: true,
-        rss: true,
+        atom: false,
+        json: false,
+        rss: false,
       },
       mdEnhance: {
         tabs: true,
