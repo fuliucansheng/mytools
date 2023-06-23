@@ -26,12 +26,12 @@ features:
   - title: unitorch
     icon: /unitorch-icon.png
     details: 🔥 SOTA DeepLearning NLP / CV / MM / CTR / RL Models Powered By PyTorch.
-    link: /unitorch/
+    link: https://github.com/fuliucansheng/unitorch
 
   - title: mytools
     icon: /favicon2.png
     details: ⚡ A collection of useful notes and tools in our daily work and personal life.
-    link: /unitorch/
+    link: https://github.com/fuliucansheng/mytools
 ---
 
 ## 开始
