@@ -1,4 +1,4 @@
-name: docs
+name: Deply Github Pages
 
 on:
   # 每当 push 到 master 分支时触发部署
@@ -35,7 +35,7 @@ jobs:
 
       # 运行构建脚本
       - name: Build VuePress site
-        run: pnpm docs:build
+        run: pnpm build:vite
 
       # 查看 workflow 的文档来获取更多信息
       # @see https://github.com/crazy-max/ghaction-github-pages

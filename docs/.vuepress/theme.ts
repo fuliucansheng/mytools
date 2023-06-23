@@ -1,0 +1,111 @@
+import { hopeTheme } from "vuepress-theme-hope";
+import { NavbarConfig } from "./navbar.js";
+
+export default hopeTheme({
+  favicon: "/favicon2.png",
+  logo: "/favicon2.png",
+  hostname: "https://fuliucansheng.github.io/",
+  iconAssets: [
+    "https://cdn.bootcdn.net/ajax/libs/font-awesome/6.4.0/css/all.min.css",
+  ],
+  iconPrefix: "fas fa-",
+  sidebarIcon: true,
+  sidebar: {
+    "/ailab/": "structure",
+    "/web/": "structure",
+    "/data/": "structure",
+    "/notes/": "structure",
+    "/tools/": "structure",
+    "/": [],
+  },
+  navbarIcon: true,
+  sidebarSorter: ["date", "order", "readme", "title", "filename"],
+  navbarLayout: {
+    start: ["Brand"],
+    center: ["Links"],
+    end: ["Language", "Repo", "Outlook", "Search"],
+  },
+  navbar: NavbarConfig,
+  repo: "fuliucansheng",
+  repoLabel: "GitHub",
+  repoDisplay: true,
+  editLink: false,
+  contributors: false,
+  copyright: "MIT Licensed | Copyright © 2023-Present 拂柳残声",
+  displayFooter: true,
+  darkmode: "disable",
+  fullscreen: false,
+  pure: false,
+  breadcrumb: true,
+  blog: {
+    name: "拂柳残声",
+    avatar: "/portrait.jpg",
+    roundAvatar: true,
+    description: "倚天照海花无数，流水高山心自知。",
+    intro: "https://fuliucansheng.github.io/",
+    medias: {
+      Github: "https://github.com/fuliucansheng",
+      BiliBili: "https://space.bilibili.com/14477446",
+      Email: "mailto:fuliucansheng@gmail.com",
+      Weibo: "https://weibo.com/fuliucansheng",
+      Zhihu: "https://www.zhihu.com/people/fuliucansheng",
+      Twitter: "https://twitter.com/fuliucansheng",
+      Youtube: "https://www.youtube.com/@fuliucansheng",
+    },
+  },
+  plugins: {
+    photoSwipe: true,
+    autoCatalog: true,
+    blog: {
+      article: "/",
+      category: "/category",
+      categoryItem: "/category/:name/",
+      tag: "/tag/:name/",
+      tagItem: "/tag/:name/",
+      star: "/star",
+      timeline: "/notes-timeline",
+      filter: ({ filePathRelative, frontmatter }) => {
+        if (!filePathRelative) return false;
+        if (!filePathRelative.startsWith("notes/")) return false;
+        if (frontmatter.home || frontmatter.layout) return false;
+
+        return true;
+      },
+    },
+    feed: {
+      atom: false,
+      json: false,
+      rss: false,
+    },
+    mdEnhance: {
+      tabs: true,
+      codetabs: true,
+      chart: true,
+      echarts: true,
+      mermaid: true,
+      katex: true,
+      mathjax: true,
+      sub: true,
+      sup: true,
+      tasklist: true,
+      card: true,
+      figure: true,
+      imgLazyload: true,
+      imgMark: true,
+      imgSize: true,
+      attrs: true,
+      presentation: true,
+      mark: true,
+      footnote: true,
+      container: true,
+      align: true,
+    },
+    comment: {
+      provider: "Giscus",
+      repo: "fuliucansheng/mytools",
+      repoId: "R_kgDOJyeEew",
+      category: "General",
+      categoryId: "DIC_kwDOJyeEe84CXasP",
+    },
+  },
+});

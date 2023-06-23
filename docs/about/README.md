@@ -4,9 +4,9 @@ title: 关于我
 
 ## 个人简介
 
-&nbsp;&nbsp;&nbsp;&nbsp;拂柳残声，微软广告算法工程师，专注于互联网技术与AI算法，目前主要从事自然语言处理、计算机视觉以及多模态领域的研究与应用。
+&nbsp;&nbsp;&nbsp;&nbsp;拂柳残声，微软广告算法工程师，专注于互联网技术与 AI 算法，目前主要从事自然语言处理、计算机视觉以及多模态领域的研究与应用。
 
-## 技术栈
+## 技术
 
 ### 编程语言
 
@@ -24,13 +24,6 @@ title: 关于我
 ![](https://img.shields.io/badge/Tortoise-7F63AE?style=flat&logo=Python&logoColor=white)&nbsp;
 
 ## 开源项目
-
-<!-- <a href="https://github.com/fuliucansheng/unitorch">
-  <img align="center" src="https://github-readme-stats.vercel.app/api/pin/?username=fuliucansheng&repo=unitorch" />
-</a>
-<a href="https://github.com/fuliucansheng/mytools">
-  <img align="center" src="https://github-readme-stats.vercel.app/api/pin/?username=fuliucansheng&repo=mytools" />
-</a> -->
 
 [![](https://github-readme-stats.vercel.app/api/pin/?username=fuliucansheng&repo=unitorch =350x)](https://github.com/fuliucansheng/unitorch)&nbsp;
 [![](https://github-readme-stats.vercel.app/api/pin/?username=fuliucansheng&repo=mytools =350x)](https://github.com/fuliucansheng/mytools)&nbsp;

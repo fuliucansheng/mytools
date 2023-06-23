@@ -13,10 +13,10 @@ actions:
     link: /ailab
     type: primary
 
-  - text: Web技术栈 📖
+  - text: Web技术 📖
     link: /web
 
-  - text: 大数据技术栈 📖
+  - text: 大数据技术 📖
     link: /data
 
   - text: 百宝箱 🛠
@@ -28,10 +28,22 @@ features:
     details: 🔥 SOTA DeepLearning NLP / CV / MM / CTR / RL Models Powered By PyTorch.
     link: /unitorch/
 
+  - title: mytools
+    icon: /favicon2.png
+    details: ⚡ A collection of useful notes and tools in our daily work and personal life.
+    link: /unitorch/
 ---
 
 ## 开始
 
+### unitorch
+
 ```bash
 pip install unitorch
+```
+
+### mytools
+
+```bash
+pip install git+https://github.com/fuliucansheng/mytools
 ```

@@ -1,9 +1,9 @@
 ---
 icon: toolbox
+date: 2023-01-01
 ---
 
-# 常用工具箱
+# 工具箱
 
-- [AI工具列表](/tools/ai)
-- [Git配置](/tools/git)
-- [VPS配置](/tools/vps)
+- [Shell 脚本](/tools/shell)
+- [VPS 配置](/tools/vps)

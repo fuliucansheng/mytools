@@ -2,4 +2,4 @@
 icon: lightbulb
 ---
 
-# AI实验室
+# AI 实验室

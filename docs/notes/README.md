@@ -3,24 +3,24 @@ containerClass: home
 home: true
 icon: book-open
 layout: BlogHome
-title: 拂柳残声の技术随笔
+title: 技术笔记
 heroImage: /favicon3.png
 bgImage: /background.jpg
-heroText: 拂柳残声の技术随笔
+heroText: 拂柳残声の技术笔记
 tagline: 专注于互联网技术与人工智能
+date: 2023-01-01
 
-projects :
-  - name: LLM模型
+projects:
+  - name: LLM系列
     link: /notes/nlp/llm
     type: primary
 
-  - name: Diffusion模型
+  - name: Diffusion系列
     link: /notes/cv/diffusion
 
-  - name: 多模态模型
+  - name: 多模态系列
     link: /notes/mm/
 
   - name: unitorch框架
     link: /unitorch
-
 ---
