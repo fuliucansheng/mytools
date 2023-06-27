@@ -4,7 +4,7 @@ import { NavbarConfig } from "./navbar.js";
 export default hopeTheme({
   favicon: "/favicon2.png",
   logo: "/favicon2.png",
-  hostname: "https://fuliucansheng.github.io/",
+  hostname: "https://mytools.fuliucansheng.vercel.app/",
   iconAssets: [
     "https://cdn.bootcdn.net/ajax/libs/font-awesome/6.4.0/css/all.min.css",
   ],
@@ -42,7 +42,7 @@ export default hopeTheme({
     avatar: "/portrait.jpg",
     roundAvatar: true,
     description: "倚天照海花无数，流水高山心自知。",
-    intro: "https://fuliucansheng.github.io/",
+    intro: "https://mytools.fuliucansheng.vercel.app/",
     medias: {
       Github: "https://github.com/fuliucansheng",
       BiliBili: "https://space.bilibili.com/14477446",

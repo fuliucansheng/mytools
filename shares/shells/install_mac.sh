@@ -33,7 +33,7 @@ ln -s -f .tmux/.tmux.conf
 cp .tmux/.tmux.conf.local .
 
 # vimrc
-wget https://raw.githubusercontent.com/fuliucansheng/mytools/master/shares/dotfiles/vim/vimrc -q -O ~/.vimrc
+wget https://raw.githubusercontent.com/fuliucansheng/mytools/master/shares/shells/vim/vimrc -q -O ~/.vimrc
 
 # oh my zsh
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
