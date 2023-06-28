@@ -26,3 +26,5 @@ docs/.vuepress/.cache
 *.njsproj
 *.sln
 *.sw?
+
+src/mytools.egg-info/*
