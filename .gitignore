@@ -27,4 +27,10 @@ docs/.vuepress/.cache
 *.sln
 *.sw?
 
-src/mytools.egg-info/*
+# python
+*.pyc
+src/*.egg-info/*
+./pytest_cache/*
+build/*
+dist/*
+.eggs/*
