@@ -63,7 +63,7 @@ export default hopeTheme({
       tag: "/tag/:name/",
       tagItem: "/tag/:name/",
       star: "/star",
-      timeline: "/notes-timeline",
+      timeline: "/timeline",
       filter: ({ filePathRelative, frontmatter }) => {
         if (!filePathRelative) return false;
         if (!filePathRelative.startsWith("notes/")) return false;
