@@ -27,7 +27,19 @@ Join the open-source community and start exploring the possibilities with mytool
 # Installation
 
 ```bash
+sudo apt install ffmpeg redis
 pip3 install git+https://github.com/fuliucansheng/mytools
+```
+
+# Document
+
+```bash
+sudo apt purge nodejs
+sudo apt autoremove
+sudo apt update
+sudo apt install -y curl
+curl -fsSL https://deb.nodesource.com/setup_20.x | sudo -E bash -
+sudo apt install nodejs build-essential -y
 ```
 
 # License

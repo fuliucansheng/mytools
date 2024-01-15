@@ -59,15 +59,15 @@ openssl s_server -www -accept 443 -cert server.crt -key server.key
 
 3. 更新Nginx配置
 
-   * 下载nginx.conf
+   - 下载nginx.conf
 
-    ```bash
-    wget https://raw.githubusercontent.com/fuliucansheng/mytools/master/shares/vps/v2ray/nginx.conf
-    ```
+   ```bash
+   wget https://raw.githubusercontent.com/fuliucansheng/mytools/master/shares/vps/v2ray/nginx.conf
+   ```
 
-   * 使用文本编辑器打开 nginx.conf 文件。
-     * 更新 ssl_certificate 和 ssl_certificate_key 为你自己的证书路径。
-     * 更新 server_name 为你自己的域名。
+   - 使用文本编辑器打开 nginx.conf 文件。
+     - 更新 ssl_certificate 和 ssl_certificate_key 为你自己的证书路径。
+     - 更新 server_name 为你自己的域名。
 
 4. 更新Nginx配置并重启Nginx：
 

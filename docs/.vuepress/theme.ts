@@ -1,107 +1,96 @@
-import { hopeTheme } from "vuepress-theme-hope";
-import { NavbarConfig } from "./navbar.js";
+import { recoTheme } from "vuepress-theme-reco";
 
-export default hopeTheme({
-  favicon: "/favicon2.png",
+const navbar = [
+  { text: "AI实验室", link: "/", icon: "Idea" },
+  {
+    text: "教程",
+    icon: "SubVolume",
+    children: [
+      {
+        text: "unitorch",
+        children: [
+          { text: "主题配置", link: "/docs/theme/frontmatter" },
+          { text: "Markdown 扩展", link: "/docs/theme/custom-container" },
+          { text: "高级", link: "/docs/theme/custom-catalog-title" },
+        ],
+      },
+      {
+        text: "mytools",
+        children: [
+          { text: "page", link: "/docs/plugins/page" },
+          { text: "comments", link: "/docs/plugins/comments" },
+          { text: "vue-previews", link: "/docs/plugins/vue-previews" },
+          { text: "bulletin-popover", link: "/docs/plugins/bulletin-popover" },
+        ],
+      },
+    ],
+  },
+  {
+    text: "博客",
+    icon: "Blog",
+    children: [
+      {
+        text: "自然语言处理",
+        children: [
+          { text: "page", link: "/docs/plugins/page" },
+          { text: "comments", link: "/docs/plugins/comments" },
+          { text: "vue-previews", link: "/docs/plugins/vue-previews" },
+          { text: "bulletin-popover", link: "/docs/plugins/bulletin-popover" },
+        ],
+      },
+      {
+        text: "计算机视觉",
+        children: [
+          { text: "page", link: "/docs/plugins/page" },
+          { text: "comments", link: "/docs/plugins/comments" },
+          { text: "vue-previews", link: "/docs/plugins/vue-previews" },
+          { text: "bulletin-popover", link: "/docs/plugins/bulletin-popover" },
+        ],
+      },
+      {
+        text: "多模态",
+        children: [
+          { text: "page", link: "/docs/plugins/page" },
+          { text: "comments", link: "/docs/plugins/comments" },
+          { text: "vue-previews", link: "/docs/plugins/vue-previews" },
+          { text: "bulletin-popover", link: "/docs/plugins/bulletin-popover" },
+        ],
+      },
+      {
+        text: "推荐系统",
+        children: [
+          { text: "page", link: "/docs/plugins/page" },
+          { text: "comments", link: "/docs/plugins/comments" },
+          { text: "vue-previews", link: "/docs/plugins/vue-previews" },
+          { text: "bulletin-popover", link: "/docs/plugins/bulletin-popover" },
+        ],
+      },
+      {
+        text: "强化学习",
+        children: [
+          { text: "page", link: "/docs/plugins/page" },
+          { text: "comments", link: "/docs/plugins/comments" },
+          { text: "vue-previews", link: "/docs/plugins/vue-previews" },
+          { text: "bulletin-popover", link: "/docs/plugins/bulletin-popover" },
+        ],
+      },
+    ],
+  },
+  { text: "关于我", link: "/about", icon: "Information" },
+];
+
+export default recoTheme({
   logo: "/favicon2.png",
   hostname: "https://mytools.fuliucansheng.vercel.app/",
-  iconAssets: [
-    "https://cdn.bootcdn.net/ajax/libs/font-awesome/6.4.0/css/all.min.css",
-  ],
-  iconPrefix: "fas fa-",
-  sidebarIcon: true,
-  sidebar: {
-    "/ailab/": "structure",
-    "/web/": "structure",
-    "/data/": "structure",
-    "/notes/": "structure",
-    "/tools/": "structure",
-    "/": [],
-  },
-  navbarIcon: true,
-  sidebarSorter: ["date", "order", "readme", "title", "filename"],
-  navbarLayout: {
-    start: ["Brand"],
-    center: ["Links"],
-    end: ["Language", "Repo", "Outlook", "Search"],
-  },
-  navbar: NavbarConfig,
-  repo: "fuliucansheng",
-  repoLabel: "GitHub",
-  repoDisplay: true,
-  editLink: false,
-  contributors: false,
-  copyright: "MIT Licensed | Copyright © 2023-Present 拂柳残声",
-  displayFooter: true,
-  darkmode: "disable",
-  fullscreen: false,
-  pure: false,
-  breadcrumb: true,
-  blog: {
-    name: "拂柳残声",
-    avatar: "/portrait.jpg",
-    roundAvatar: true,
-    description: "倚天照海花无数，流水高山心自知。",
-    intro: "https://mytools.fuliucansheng.vercel.app/",
-    medias: {
-      Github: "https://github.com/fuliucansheng",
-      BiliBili: "https://space.bilibili.com/14477446",
-      Email: "mailto:fuliucansheng@gmail.com",
-      Weibo: "https://weibo.com/fuliucansheng",
-      Zhihu: "https://www.zhihu.com/people/fuliucansheng",
-      Twitter: "https://twitter.com/fuliucansheng",
-      Youtube: "https://www.youtube.com/@fuliucansheng",
-    },
-  },
-  plugins: {
-    photoSwipe: true,
-    autoCatalog: true,
-    blog: {
-      article: "/",
-      category: "/category",
-      categoryItem: "/category/:name/",
-      tag: "/tag/:name/",
-      tagItem: "/tag/:name/",
-      star: "/star",
-      timeline: "/timeline",
-      filter: ({ filePathRelative, frontmatter }) => {
-        if (!filePathRelative) return false;
-        if (!filePathRelative.startsWith("notes/")) return false;
-        if (frontmatter.home || frontmatter.layout) return false;
-
-        return true;
-      },
-    },
-    feed: {
-      atom: false,
-      json: false,
-      rss: false,
-    },
-    mdEnhance: {
-      tabs: true,
-      codetabs: true,
-      chart: true,
-      echarts: true,
-      mermaid: true,
-      katex: true,
-      mathjax: true,
-      sub: true,
-      sup: true,
-      tasklist: true,
-      card: true,
-      figure: true,
-      imgLazyload: true,
-      imgMark: true,
-      imgSize: true,
-      attrs: true,
-      presentation: true,
-      mark: true,
-      footnote: true,
-      container: true,
-      align: true,
-    },
-    comment: {
-      provider: "Giscus",
+  colorMode: "light",
+  autoSetBlogCategories: false,
+  autoAddCategoryToNavbar: false,
+  autoSetSeries: false,
+  catalogTitle: "目录",
+  navbar: navbar,
+  commentConfig: {
+    type: "giscus",
+    options: {
       repo: "fuliucansheng/mytools",
       repoId: "R_kgDOJyeEew",
       category: "General",

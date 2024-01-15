@@ -10,26 +10,25 @@ title: 关于我
 
 ### 编程语言
 
-![](https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white)&nbsp;
-![](https://img.shields.io/badge/C%2B%2B-00599C?style=flat&logo=c%2B%2B&logoColor=white)&nbsp;
-![](https://img.shields.io/badge/Node.js-339933?style=flat&logo=node.js&logoColor=white)&nbsp;
-![](https://img.shields.io/badge/Go-00ADD8?style=flat&logo=go&logoColor=white)&nbsp;
+<span class="skill-item">![](https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white)</span>
+<span class="skill-item">![](https://img.shields.io/badge/C%2B%2B-00599C?style=flat&logo=c%2B%2B&logoColor=white)</span>
+<span class="skill-item">![](https://img.shields.io/badge/Node.js-339933?style=flat&logo=node.js&logoColor=white)</span>
+<span class="skill-item">![](https://img.shields.io/badge/Go-00ADD8?style=flat&logo=go&logoColor=white)</span>
 
 ### 开源框架
 
-![](https://img.shields.io/badge/PyTorch-EE4C2C?style=flat&logo=PyTorch&logoColor=white)&nbsp;
-![](https://img.shields.io/badge/Vue.js-4FC08D?style=flat&logo=Vue.js&logoColor=white)&nbsp;
-![](https://img.shields.io/badge/Element%20Plus-409EFF?style=flat&logo=Vue.js&logoColor=white)&nbsp;
-![](https://img.shields.io/badge/FastAPI-009688?style=flat&logo=FastAPI&logoColor=white)&nbsp;
-![](https://img.shields.io/badge/Gin-00ADD8?style=flat&logo=go&logoColor=white)&nbsp;
-
+<span class="skill-item">![](https://img.shields.io/badge/PyTorch-EE4C2C?style=flat&logo=PyTorch&logoColor=white)</span>
+<span class="skill-item">![](https://img.shields.io/badge/Vue.js-4FC08D?style=flat&logo=Vue.js&logoColor=white)</span>
+<span class="skill-item">![](https://img.shields.io/badge/Element%20Plus-409EFF?style=flat&logo=Vue.js&logoColor=white)</span>
+<span class="skill-item">![](https://img.shields.io/badge/FastAPI-009688?style=flat&logo=FastAPI&logoColor=white)</span>
+<span class="skill-item">![](https://img.shields.io/badge/Gin-00ADD8?style=flat&logo=go&logoColor=white)</span>
 
 ## 开源项目
 
-[![](https://github-readme-stats.vercel.app/api/pin/?username=fuliucansheng&repo=unitorch =350x)](https://github.com/fuliucansheng/unitorch)&nbsp;
-[![](https://github-readme-stats.vercel.app/api/pin/?username=fuliucansheng&repo=mytools =350x)](https://github.com/fuliucansheng/mytools)&nbsp;
+<span class="skill-item">[![](https://github-readme-stats.vercel.app/api/pin/?username=fuliucansheng&repo=unitorch)](https://github.com/fuliucansheng/unitorch)</span>
+<span class="skill-item">[![](https://github-readme-stats.vercel.app/api/pin/?username=fuliucansheng&repo=mytools)](https://github.com/fuliucansheng/mytools)</span>
 
 ## 联系方式
 
-<i class="fa-solid fa-envelope"></i>: fuliucansheng@gmail.com <br/>
-<i class="fa-brands fa-qq"></i>: 1376610860
+Email : fuliucansheng@gmail.com <br />
+&nbsp;Q&nbsp;Q&nbsp;&nbsp;: 1376610860

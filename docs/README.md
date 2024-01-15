@@ -1,49 +1,25 @@
 ---
-containerClass: home
 home: true
-title: 拂柳残声
-icon: user
-heroImage: /favicon1.png
-# bgImage: /background.jpg
-heroText: 风中追寻の技术人生
-tagline: 专注于互联网技术与人工智能
-
-actions:
-  - text: AI实验室 💡
-    link: /ailab
-    type: primary
-
-  - text: Web技术 📖
-    link: /web
-
-  - text: 大数据技术 📖
-    link: /data
-
-  - text: 百宝箱 🛠
-    link: /tools
-
+modules:
+  - BannerBrand
+  - Features
+  - Footer
+bannerBrand:
+  title: 拂柳残声の技术主站
+  description: 倚天照海花无数，流水高山心自知
+  tagline: 专注于互联网技术与人工智能
+  buttons:
+    - { text: Guide, link: "/docs/guide/introduce" }
+    - { text: Default Style, link: "/docs/theme/introduce", type: "plain" }
+  bgImage: /bg.svg
 features:
-  - title: unitorch
-    icon: /unitorch-icon.png
+  - title: unitorch框架
     details: 🔥 SOTA DeepLearning NLP / CV / MM / CTR / RL Models Powered By PyTorch.
-    link: https://github.com/fuliucansheng/unitorch
-
-  - title: mytools
-    icon: /favicon2.png
+  - title: mytools工具箱
     details: ⚡ A collection of useful notes and tools in our daily work and personal life.
-    link: https://github.com/fuliucansheng/mytools
+  - title: unitorch框架
+    details: 🔥 SOTA DeepLearning NLP / CV / MM / CTR / RL Models Powered By PyTorch.
+footer:
+  record: MIT Licensed
+  startYear: 2024
 ---
-
-## 开始
-
-### unitorch
-
-```bash
-pip install unitorch
-```
-
-### mytools
-
-```bash
-pip install git+https://github.com/fuliucansheng/mytools
-```

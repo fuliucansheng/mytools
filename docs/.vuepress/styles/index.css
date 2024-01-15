@@ -1,0 +1,8 @@
+.footer-wrapper > span:first-of-type {
+  display: none;
+}
+
+.skill-item {
+  display: inline-block;
+  padding-right: 0.5em;
+}

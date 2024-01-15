@@ -1,29 +1,29 @@
 {
-    "inbounds": [
-        {
-            "port": 38869,
-            "listen": "127.0.0.1",
-            "protocol": "vmess",
-            "settings": {
-                "clients": [
-                    {
-                        "id": "5887937f-xxxx-xxxx-xxxx-648ff02f3029",
-                        "alterId": 0
-                    }
-                ]
-            },
-            "streamSettings": {
-                "network": "ws",
-                "wsSettings": {
-                    "path": "/vpn"
-                }
-            }
+  "inbounds": [
+    {
+      "port": 38869,
+      "listen": "127.0.0.1",
+      "protocol": "vmess",
+      "settings": {
+        "clients": [
+          {
+            "id": "5887937f-xxxx-xxxx-xxxx-648ff02f3029",
+            "alterId": 0
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "wsSettings": {
+          "path": "/vpn"
         }
-    ],
-    "outbounds": [
-        {
-            "protocol": "freedom",
-            "settings": {}
-        }
-    ]
+      }
+    }
+  ],
+  "outbounds": [
+    {
+      "protocol": "freedom",
+      "settings": {}
+    }
+  ]
 }

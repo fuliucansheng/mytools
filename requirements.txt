@@ -1,0 +1,4 @@
+fire
+redis
+azure-storage-blob
+bilibili-api-python
