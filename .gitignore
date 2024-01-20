@@ -13,8 +13,10 @@ dist-ssr
 *.local
 .temp
 .cache
-docs/.vuepress/.temp
-docs/.vuepress/.cache
+sites/.vuepress/.temp
+sites/.vuepress/.cache
+package-lock.json
+pnpm-lock.yaml
 
 # Editor directories and files
 .vscode/*
