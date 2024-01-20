@@ -4,5 +4,5 @@
     "module": "NodeNext",
     "target": "ES2020"
   },
-  "include": ["./docs/.vuepress/**/*.ts", "docs/.vuepress/config.ts"]
+  "include": ["./sites/.vuepress/**/*.ts", "sites/.vuepress/config.ts"]
 }

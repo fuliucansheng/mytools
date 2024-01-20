@@ -4,16 +4,16 @@
   "description": "拂柳残声の技术博客",
   "type": "module",
   "scripts": {
-    "build:vite": "vuepress-vite build docs",
-    "build:vite-debug": "cross-env DEBUG=vuepress* vuepress-vite build docs",
-    "build:webpack": "vuepress-webpack build docs",
-    "build:webpack-debug": "cross-env DEBUG=vuepress* vuepress-webpack build docs",
-    "dev:vite": "vuepress-vite dev docs",
-    "dev:vite-clean": "vuepress-vite dev docs --clean-cache",
-    "dev:vite-debug": "cross-env DEBUG=vuepress* vuepress-vite dev docs",
-    "dev:webpack": "vuepress-webpack dev docs",
-    "dev:webpack-clean": "vuepress-webpack dev docs --clean-cache",
-    "dev:webpack-debug": "cross-env DEBUG=vuepress* vuepress-webpack dev docs",
+    "build:vite": "vuepress-vite build sites",
+    "build:vite-debug": "cross-env DEBUG=vuepress* vuepress-vite build sites",
+    "build:webpack": "vuepress-webpack build sites",
+    "build:webpack-debug": "cross-env DEBUG=vuepress* vuepress-webpack build sites",
+    "dev:vite": "vuepress-vite dev sites",
+    "dev:vite-clean": "vuepress-vite dev sites --clean-cache",
+    "dev:vite-debug": "cross-env DEBUG=vuepress* vuepress-vite dev sites",
+    "dev:webpack": "vuepress-webpack dev sites",
+    "dev:webpack-clean": "vuepress-webpack dev sites --clean-cache",
+    "dev:webpack-debug": "cross-env DEBUG=vuepress* vuepress-webpack dev sites",
     "lint": "prettier --check --write .",
     "lint:check": "prettier --check .",
     "lint-md": "markdownlint **/*.md --ignore node_modules --fix"
@@ -24,8 +24,7 @@
   "dependencies": {
     "@vuepress/cli": "^2.0.0-rc.0",
     "@vuepress/client": "^2.0.0-rc.0",
-    "options": "^0.0.6",
-    "vue": "^3.4.13",
+    "vue": "^3.4.15",
     "vuepress": "^2.0.0-rc.0",
     "vuepress-theme-reco": "^2.0.0-rc.5",
     "vuepress-vite": "^2.0.0-rc.0",
@@ -34,6 +33,6 @@
   "devDependencies": {
     "cross-env": "^7.0.3",
     "markdownlint-cli": "^0.38.0",
-    "prettier": "^3.2.1"
+    "prettier": "^3.2.4"
   }
 }
