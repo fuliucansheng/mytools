@@ -9,14 +9,14 @@ const navbar = [
       {
         text: "unitorch框架",
         children: [
-          { text: "文档指南", link: "/unitorch" },
+          { text: "文档指南", link: "/unitorch/" },
           { text: "快速开始", link: "/unitorch/configuration" },
         ],
       },
       {
         text: "mytools工具箱",
         children: [
-          { text: "文档指南", link: "/mytools" },
+          { text: "文档指南", link: "/mytools/" },
           { text: "工具列表", link: "/mytools/spaces" },
         ],
       },

@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-         <loc>https://fuliucansheng.github.io/unitorch/</loc>
+         <loc>https://fuliucansheng.github.io/mytools/</loc>
          <lastmod>2024-01-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://fuliucansheng.github.io/unitorch/coverage/</loc>
+         <loc>https://fuliucansheng.github.io/mytools/coverage/</loc>
          <lastmod>2024-01-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
