@@ -10,6 +10,13 @@ import logging
 import pandas as pd
 from bilibili_api import video, HEADERS
 
+logging.basicConfig(
+    format="%(asctime)s : %(levelname)s : %(message)s",
+    datefmt="%Y-%m-%d %H:%M:%S %p",
+    level="INFO",
+)
+
+
 def cleanup(text):
     text = re.sub(r"\n", " ", text)
     text = re.sub(r"\r", " ", text)
