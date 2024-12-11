@@ -24,4 +24,4 @@ sudo apt install -y htop vim tmux zsh
 
 pip3 install jupyterlab gpustat
 mkdir -p ~/.jupyter
-wget https://raw.githubusercontent.com/fuliucansheng/mytools/master/shares/shells/jupyter/config.py -O ~/.jupyter/jupyter_notebook_config.py
+wget https://raw.githubusercontent.com/fuliucansheng/mytools/master/shares/shells/jupyter/config.json -O ~/.jupyter/jupyter_server_config.json
