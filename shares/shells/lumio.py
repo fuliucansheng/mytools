@@ -1960,8 +1960,8 @@ Your workspace directory is `{workspace}`. Use it to store any files you create 
 
 CODING_PROMPT = """
 Your workspace directory is `{workspace}`. 
-The temporary directory is `{workspace}/.do/cache`. Use it to store any files you create or edit during the task.
-The package index file is `{workspace}/.do/index.md`. Please check it if you need any information about the files in the workspace. 
+The temporary directory is `{workspace}/.lumio/cache`. Use it to store any files you create or edit during the task.
+The package index file is `{workspace}/.lumio/index.md`. Please check it if you need any information about the files in the workspace. 
 The actual package folder is in `{workspace}/src/`. Please import it from there if you need to use it in your code.
 """
 
@@ -2070,8 +2070,8 @@ class LumioAgent(GenericAgent):
 class CLI:
     def __init__(self):
         package_folder = os.path.abspath(os.path.dirname(__file__))
-        if not os.path.exists(f"{package_folder}/.do/cache"):
-            os.makedirs(f"{package_folder}/.do/cache")
+        if not os.path.exists(f"{package_folder}/.lumio/cache"):
+            os.makedirs(f"{package_folder}/.lumio/cache")
         self.code_lumio = LumioAgent(
             system_prompt=SYSTEM_PROMPT
             + CODING_PROMPT.format(workspace=package_folder),
@@ -2156,7 +2156,7 @@ For each file:
 
 Output Format:
 * Use Markdown.
-* Update the result to `.do/INDEX.md` in workspace folder. Please create the file if it does not exist.
+* Update the result to `.lumio/INDEX.md` in workspace folder. Please create the file if it does not exist.
 * Use clear formatting (e.g., ### for file names, bullet points for classes/functions/dependencies).
 
 Goal:
