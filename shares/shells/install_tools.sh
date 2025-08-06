@@ -1,9 +1,9 @@
 #!/bin/bash -
 #===============================================================================
 #
-#          FILE: install_ubuntu.sh
+#          FILE: install_tools.sh
 #
-#         USAGE: ./install_ubuntu.sh
+#         USAGE: ./install_tools.sh
 #
 #   DESCRIPTION:
 #
@@ -18,9 +18,6 @@
 #===============================================================================
 
 set -o nounset                              # Treat unset variables as an error
-
-sudo apt update
-sudo apt install -y htop vim tmux zsh
 
 pip3 install jupyterlab gpustat
 mkdir -p ~/.jupyter
